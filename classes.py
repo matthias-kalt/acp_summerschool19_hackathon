@@ -33,3 +33,19 @@ class Workcenter(object):
     def __init__(self, id, number_of_workers):
         self.id = id
         self.number_of_workers = number_of_workers
+
+
+class ProblemInstance(object):
+
+    def __init__(self, filename, output_filename=None):
+
+        self.filename = filename
+        self.output_filename = output_filename if output_filename else filename + ".sol"
+
+        number_of_days, worksheets, roads, workcenters, max_roads_blocked, precendence_relations = read_data(filename)
+        self.number_of_days = number_of_days
+        self.worksheets = worksheets
+        self.roads = roads
+        self.workcenters = workcenters
+        self.max_roads_blocked = max_roads_blocked
+        self.precendence_relations = precendence_relations
