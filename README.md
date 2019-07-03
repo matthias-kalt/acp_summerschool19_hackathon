@@ -1,2 +1,3 @@
-# acp_summerschool19_hackathon
-Hackathon@ACP Summer School 2019
+# ACP Summer School 2019 - Hackathon
+
+We try to solve the scheduling of road maintenance via Constraint Programming
