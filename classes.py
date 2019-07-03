@@ -17,14 +17,15 @@ class Worksheet(object):
 
 class Activity(object):
 
-    def __init__(self, id, worksheet, workers_needed=None, affected_road=None):
-        self.id = id
+    def __init__(self, worksheet, rank=None, workers_needed=None, affected_road_id=None, affected_road=None):
         self.worksheet = worksheet
+        self.rank = rank
         self.workers_needed = workers_needed
+        self.affected_road_id = affected_road_id
         self.affected_road = affected_road
 
     def __str__(self):
-        return f"Activity(ID {self.id})\nwithin Worksheet ID {self.worksheet.id}\nAffected road: {self.affected_road}\nWorkers needed: {self.workers_needed}"
+        return f"Activity within Worksheet ID {self.worksheet.id} with rank {self.rank}\nAffected road: ID {self.affected_road_id}\nWorkers needed: {self.workers_needed}"
 
 
 class Road(object):
