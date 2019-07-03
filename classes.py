@@ -1,12 +1,11 @@
 class Worksheet(object):
 
-    def __init__(self, id, importance=0, mandatory=False,
-                 costcenter=None, duration=1, earliest_start=None, latest_start=None,
-                 activities=[]):
+    def __init__(self, id, importance=0, mandatory=False, workcenter=None, duration=1,
+                 earliest_start=None, latest_start=None, activities=[]):
         self.id = id
         self.importance = importance
         self.mandatory = mandatory,
-        self.costcenter = costcenter,
+        self.workcenter = workcenter,
         self.duration = duration
         self.earliest_start = earliest_start
         self.latest_start = latest_start
